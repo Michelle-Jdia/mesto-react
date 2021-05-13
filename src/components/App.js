@@ -6,12 +6,10 @@ import ImagePopup from "./ImagePopup";
 import Footer from "./Footer";
 
 function App() {
-  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] =
-    React.useState(false);
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
-  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] =
-    React.useState(false);
-  const [selectedCard, setSelectedCard] = React.useState("");
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
+  const [selectedCard, setSelectedCard] = React.useState(null );
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
@@ -29,7 +27,7 @@ function App() {
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
-    setSelectedCard("");
+    setSelectedCard(null );
   }
 
   function handleCardClick(card) {
@@ -59,7 +57,7 @@ function App() {
         buttonText="Сохранить"
         isOpen={isEditProfilePopupOpen}
         onClose={closeAllPopups}>
-        <label className="popup__label" for="input-profile-name"></label>
+        {/* <label className="popup__label" for="input-profile-name"></label> */}
         <input
           id="input-profile-name"
           type="text"
@@ -71,7 +69,7 @@ function App() {
           maxLength="40"
         />
         <span className="popup__input-error"></span>
-        <label className="popup__label" for="input-about"></label>
+        {/* <label className="popup__label" for="input-about"></label> */}
         <input
           id="input-about"
           type="text"
@@ -94,7 +92,7 @@ function App() {
         buttonText="Сохранить"
         isOpen={isAddPlacePopupOpen}
         onClose={closeAllPopups}>
-        <label className="popup-creat__label" for="input-name"></label>
+        {/* <label className="popup-creat__label" for="input-name"></label> */}
         <input
           type="text"
           className="popup-creat__input-text popup-creat__input-name"
@@ -106,7 +104,7 @@ function App() {
           maxLength="30"
         />
         <span className="popup__input-error"></span>
-        <label className="popup-creat__label" for="input-link"></label>
+        {/* <label className="popup-creat__label" for="input-link"></label> */}
         <input
           type="url"
           className="popup-creat__input-text popup-creat__input-link"
@@ -126,7 +124,7 @@ function App() {
         buttonText="Сохранить"
         isOpen={isEditAvatarPopupOpen}
         onClose={closeAllPopups}>
-        <label className="popup-avatar__label" for="input-link"></label>
+        {/* <label className="popup-avatar__label" for="input-link"></label> */}
         <input
           type="url"
           className="popup-avatar__input-text popup-avatar__input-link"

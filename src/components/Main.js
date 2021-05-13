@@ -1,4 +1,4 @@
-import api from "../utils/Api";
+import api from "../utils/api";
 import React from "react";
 import Card from "./Card";
 import "../index.css";
@@ -10,13 +10,17 @@ function Main(props) {
   const { onEditAvatar, onAddPlace, onEditProfile, onCardClick } = props;
 
   React.useEffect(() => {
-    api.getUserInfo().then((data) => {
-      setUserName(data.name);
-      setUserDescription(data.about);
-      setUserAvatar(data.avatar);
-    });
     api
-      .getInitialCards()
+      .getUserInfo()
+      .then((data) => {
+        setUserName(data.name);
+        setUserDescription(data.about);
+        setUserAvatar(data.avatar);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    api.getInitialCards()
       .then((cardList) => {
         setCards(cardList);
       })
