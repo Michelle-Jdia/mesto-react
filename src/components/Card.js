@@ -1,5 +1,5 @@
 import React from "react";
-
+export default Card;
 function Card(props) {
   function handleClick() {
     props.onCardClick(props.card);
@@ -27,4 +27,3 @@ function Card(props) {
   );
 }
 
-export default Card;

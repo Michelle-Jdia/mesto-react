@@ -2,6 +2,7 @@ import api from "../utils/api";
 import React from "react";
 import Card from "./Card";
 import "../index.css";
+export default Main;
 function Main(props) {
   const [userName, setUserName] = React.useState("");
   const [userDescription, setUserDescription] = React.useState("");
@@ -63,5 +64,3 @@ function Main(props) {
     </main>
   );
 }
-
-export default Main;
