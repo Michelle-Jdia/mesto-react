@@ -4,13 +4,16 @@ export default AddPlacePopup;
 function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
   const [name, setName] = React.useState("");
   const [link, setLink] = React.useState("");
-
+  React.useEffect(_ => {
+    setName('');
+    setLink('');
+  }, [isOpen]);
   function handleSubmit(evt) {
     evt.preventDefault();
     onAddPlace({
       name: name,
       link: link,
-    });
+    }, [isOpen]);
   }
 
   function handleChangeName(evt) {
@@ -39,6 +42,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         minLength="2"
         maxLength="30"
         onChange={handleChangeName}
+        value={name}
       />
       <span className="popup__input-error"></span>
       {/* <label className="popup-creat__label" for="input-link"></label> */}
@@ -49,6 +53,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         name="link"
         placeholder="Ссылка на картинку"
         onChange={handleChangeLink}
+        value={link}
         required
       />
       <span className="popup__input-error"></span>
