@@ -13,7 +13,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
     onAddPlace({
       name: name,
       link: link,
-    }, [isOpen]);
+    });
   }
 
   function handleChangeName(evt) {
