@@ -20,4 +20,4 @@
 ------
 
 ------
- [Ссылка на гитхаб](https://michelle-jdia.github.io/mesto/)
+ [Ссылка на гитхаб](https://github.com/Michelle-Jdia/mesto-react)
