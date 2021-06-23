@@ -165,7 +165,7 @@ function App() {
 
 				{/* end popup creat card */}
 
-				{/* start popup edite avatar */}
+				{/* start popup edit avatar */}
 
 				<EditAvatarPopup
 					isOpen={isEditAvatarPopupOpen}
@@ -173,10 +173,10 @@ function App() {
 					onUpdateAvatar={handleUpdateAvatar}
 				/>
 
-				{/* end popup edite avatar */}
+				{/* end popup edit avatar */}
 
 				{/* start popup ask */}
-				<PopupWithForm title="Вы уверены?" name="remove-card" buttonText="Да" onClose={closeAllPopups} />
+				<PopupWithForm title="Are you sure?" name="remove-card" buttonText="Yes" onClose={closeAllPopups} />
 				{/* end popup ask */}
 
 				{/* start popup img */}
